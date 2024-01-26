@@ -16,7 +16,11 @@
             if (el < data.length) {
                 alert(data[el])
             } else {
-                alert("wrong position")
+                if (typeof parseInt(el) === "number") {
+                    alert(` ${el} = Invalid Position`)
+                } else {
+                    alert(`${el} = Invalid Input`)
+                }
             }
 
         }
