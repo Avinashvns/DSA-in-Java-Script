@@ -9,9 +9,16 @@
     <script>
         let data = [9, 8, 6, 1, 3, 0];
 
+
         function getElement() {
-            let el = document.getElementById('array_value').value;
-            alert(data[el])
+            let el = document.getElementById('array_value').value
+
+            if (el < data.length) {
+                alert(data[el])
+            } else {
+                alert("wrong position")
+            }
+
         }
 
     </script>
