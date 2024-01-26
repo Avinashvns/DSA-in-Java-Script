@@ -4,25 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Insert</title>
+    <title>Array Delete</title>
     <script>
         let data = [9, 2, 6, 3, 8, 0, 5];
+        console.warn("Real Data =", data)
 
-        let newEl = 90;
-        let position = 1;
+        // remove this position
+        let position = 5;
+        let delEl = data[position];
 
-        for (let i = data.length - 1; i >= 0; i--) {
-            document.write(`array position last ${i} is value = ${data[i]} <br />`)
-            if (i >= position) {
-                data[i + 1] = data[i]
-                if (i == position) {
-                    data[i] = newEl;
-                }
-            }
 
+        for (let i = position; i < data.length - 1; i++) {
+            data[i] = data[i + 1]
+            console.warn(data[i])
+            // delEl = data[position]
         }
+        // array delete
+        data.length = data.length - 1;
+        console.warn("new Data =", data)
 
-        document.write(`Add new element ${newEl} on Position ${position} is value = ${data}`)
+
+        document.write(`Delete Array Value ${delEl} on Position ${position} is value = ${data}`)
 
     </script>
 </head>
