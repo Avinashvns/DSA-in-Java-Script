@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Search</title>
+    <title>Two Array Merge </title>
     <script>
-        let data = [20, 40, 80, 10, 30, 60, 90, 50]
-        let item = 30;
-        let index = undefined;
+        let data1 = [20, 40, 80, 10]
+        let data2 = [30, 50, 60]
+        let data3 = []
 
-        for (let i = 0; i < data.length - 1; i++) {
-            // console.warn(data[i])
-            if (data[i] === item) {
-                index = i;
-            }
+        for (let i = 0; i < data1.length; i++) {
+            data3[i] = data1[i];
         }
-        console.warn(index)
-        // document.write("Position where find Element : ", index);
+        for (let i = 0; i < data2.length; i++) {
+            data3[data1.length + i] = data2[i]
+        }
+        console.warn("Data 3 : ", data3)
+
     </script>
 </head>
 
