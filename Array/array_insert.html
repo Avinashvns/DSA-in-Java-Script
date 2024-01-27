@@ -4,28 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Delete</title>
+    <title>Array Search</title>
     <script>
-        let data = [9, 2, 6, 3, 8, 0, 5];
-        console.warn("Real Data =", data)
+        let data = [20, 40, 80, 10, 30, 60, 90, 50]
+        let item = 30;
+        let index = undefined;
 
-        // remove this position
-        let position = 5;
-        let delEl = data[position];
-
-
-        for (let i = position; i < data.length - 1; i++) {
-            data[i] = data[i + 1]
-            console.warn(data[i])
-            // delEl = data[position]
+        for (let i = 0; i < data.length - 1; i++) {
+            // console.warn(data[i])
+            if (data[i] === item) {
+                index = i;
+            }
         }
-        // array delete
-        data.length = data.length - 1;
-        console.warn("new Data =", data)
-
-
-        document.write(`Delete Array Value ${delEl} on Position ${position} is value = ${data}`)
-
+        console.warn(index)
+        // document.write("Position where find Element : ", index);
     </script>
 </head>
 
